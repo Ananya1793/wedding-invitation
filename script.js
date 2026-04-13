@@ -14,9 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (startBtn && overlay) {
         startBtn.addEventListener('click', () => {
             console.log("Opening Invitation...");
-            overlay.classList.add('hide-all');
+        // Add class to hide overlay
+        overlay.classList.add('hide-all');
 
-            // Refresh AOS animations after overlay is gone
+        // Enable body scrolling after a small delay to match animation
+        setTimeout(() => {
+            document.body.classList.remove('no-scroll');
+        }, 800);
+
+        // Resume or play music if needed
+        // audio.play().catch(err => console.log("Music play blocked by browser"));
             setTimeout(() => {
                 overlay.style.display = 'none';
                 AOS.refresh();
