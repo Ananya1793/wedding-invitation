@@ -699,10 +699,11 @@ footer .cursive {
     }
 
     .hero {
-        background: url('couple.jpg');
+        background: url('img-4.jpeg');
         background-size: cover;
         background-position: center;
-        background-attachment: scroll; /* Fixed often causes issues on mobile */
+        background-attachment: scroll;
+        /* Fixed often causes issues on mobile */
     }
 
     .hero-content h3 {
