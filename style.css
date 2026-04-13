@@ -690,10 +690,24 @@ footer .cursive {
 
     .couple-names {
         font-size: 2.4rem;
+        margin-bottom: 5px;
+    }
+
+    .date-hero {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .hero {
+        background: url('couple.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll; /* Fixed often causes issues on mobile */
     }
 
     .hero-content h3 {
         font-size: 1.6rem;
+        margin-bottom: 5px;
     }
 
     .section-title {
@@ -722,7 +736,7 @@ footer .cursive {
         justify-content: center;
         gap: 10px;
         width: 100%;
-        margin-top: 15px;
+        margin-top: 5px;
     }
 
     .timer-item {
@@ -788,6 +802,12 @@ footer .cursive {
 
     .couple-names {
         font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .date-hero {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
     }
 
     .section-title {
@@ -804,6 +824,13 @@ footer .cursive {
         width: auto;
         min-width: unset;
         padding: 5px;
+    }
+
+    .hero {
+        background: url('couple.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
     }
 
     .families-grid {
