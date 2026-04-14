@@ -54,23 +54,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     setInterval(updateTimer, 1000);
     updateTimer();
-    // Scroll to Top Button Logic
+    // Scroll Logic
     const scrollToTopBtn = document.getElementById('scrollToTop');
-    if (scrollToTopBtn) {
-        window.addEventListener('scroll', () => {
+    const scrollIndicator = document.getElementById('scroll-indicator');
+    
+    window.addEventListener('scroll', () => {
+        if (scrollIndicator) {
+            if (window.scrollY > 100) {
+                scrollIndicator.classList.add('hidden');
+            } else {
+                scrollIndicator.classList.remove('hidden');
+            }
+        }
+        
+        if (scrollToTopBtn) {
             if (window.scrollY > 300) {
                 scrollToTopBtn.classList.add('show');
             } else {
                 scrollToTopBtn.classList.remove('show');
             }
-        });
-        
-        scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+        }
+    });
+        if (scrollToTopBtn) {
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
-        });
-    }
+        }
+    
 
 });
